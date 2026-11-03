@@ -1,0 +1,7 @@
+D01,Vịnh Hạ Long,Thiên nhiên,1500000,4.8,1
+D02,Phố cổ Hội An,Văn hóa,500000,4.5,1
+D03,Bà Nà Hills,Giải trí,2000000,4.9,2
+D04,Chợ Bến Thành,Mua sắm,200000,3.8,5
+D05,Đà Lạt,Nghỉ dưỡng,1200000,4.6,1
+D06,Phú Quốc,Nghỉ dưỡng,3000000,4.9,1
+D07,Sapa,Thiên nhiên,1800000,4.7,1

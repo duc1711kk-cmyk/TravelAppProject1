@@ -1,0 +1,65 @@
+TRAVELAPP - BAN KHUNG MUC DO VUA
+
+MUC DICH
+- Giu nguyen giao dien Java Swing va cac diem ket noi/su kien hien co.
+- Giu nguyen ten class, ten ham, tham so, kieu tra ve va constructor.
+- De trong logic nghiep vu de 5 thanh vien tu hoan thien.
+- FileHandler.java duoc giu nguyen de lam lop doc/ghi file co ban.
+- Destination.java va cac getter/setter duoc giu nguyen.
+- Itinerary.addDay() duoc giu nguyen vi day la thao tac nen de tao ngay va tranh lam hong luong khoi tao.
+
+CAC FILE NHOM CAN HOAN THIEN
+
+1) service/SearchService.java
+   - searchByName(): tim theo ten, khong phan biet hoa/thuong.
+   - filterByCategory(): loc theo danh muc; xu ly truong hop "Tat ca".
+
+2) service/BudgetService.java
+   - suggestKnapsack(): cai dat quy hoach dong Knapsack 0/1 de chon dia diem trong ngan sach.
+
+3) service/ItineraryService.java
+   - addToDay(): kiem tra chi so ngay, tranh trung dia diem, them vao DayPlan.
+   - isOverBudget(): so sanh tong chi phi voi ngan sach.
+   - autoDistribute(): chia danh sach dia diem vao cac ngay theo so luong moi ngay.
+   - exportText(): tao chuoi van ban mo ta lich trinh va chi phi.
+
+4) service/RatingService.java
+   - rate(): kiem tra diem 1-5, cap nhat diem trung binh va so luot danh gia, luu du lieu.
+
+5) data/DestinationManager.java
+   - loadDestinationsFromFile(): doc dong du lieu, tach cac cot, tao Destination va nap ratingCounts.
+   - saveDestinationsToFile(): chuyen danh sach Destination thanh cac dong va ghi file.
+
+6) data/UserManager.java
+   - toggleFavorite(): them yeu thich neu chua co, sau do luu.
+   - removeFavoriteById(): xoa yeu thich theo ID, sau do luu.
+   - save(): luu yeu thich va lich trinh theo dinh dang FAV / ITIN / DAY.
+   - load(): doc dinh dang tren va khoi phuc User, Itinerary.
+
+7) model/DayPlan.java
+   - addDestination(): them dia diem, khong cho phep trung.
+   - removeDestination(): xoa dia diem.
+   - getTotalCost(): cong chi phi cac dia diem trong ngay.
+
+8) model/Itinerary.java
+   - removeDay(): xoa ngay va danh so lai.
+   - getTotalCost(): cong chi phi tat ca cac ngay.
+   - findDayContaining(): tim ngay dang chua dia diem, tra -1 neu khong co.
+
+9) model/User.java
+   - addFavorite(): them yeu thich, tranh trung.
+   - removeFavorite(): xoa yeu thich.
+
+PHAN DUOC GIU NGUYEN
+- Toan bo src/com/travelapp/ui/
+- Main.java va cac ket noi su kien trong MainFrame.java
+- FileHandler.java
+- Destination.java
+- Constructor, getter, setter va cac cau truc du lieu can thiet khac.
+
+LUU Y QUAN TRONG
+- Cac ham dang TODO co gia tri tra ve tam thoi de du an van bien dich.
+- Cac chuc nang lien quan se chua hoat dong dung cho den khi nhom code xong.
+- Khong doi ten ham/tham so/kieu tra ve neu chua thong nhat voi nguoi phu trach giao dien.
+- Khi code xong tung phan, chay thu lai cac man hinh va cac tinh huong loi.
+- FileHandler duoc giu lai de nhom tap trung vao nghiep vu va cach quan ly du lieu; neu muon tu code ca doc/ghi file thi can thong nhat rieng.
